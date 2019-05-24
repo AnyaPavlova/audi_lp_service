@@ -6,7 +6,7 @@
       top: 10px;
     }
   }
-  &__text {
+  &__subtext {
     font-size: 16px;
     color: #ffffff;
     position: absolute;
@@ -15,6 +15,10 @@
     font-family: AudiTNormal;
     max-width: 310px;
     line-height: 1.4;
+
+    @media all and (max-width:1280px) {
+      top: 275px;
+    }
 
     @include media-breakpoint-down($mobile_version) {
       top: 70px;
@@ -27,6 +31,30 @@
       color: #000000;
       font-size: 12px;
       max-width: 90%;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    bottom: 25px;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+    font-family: AudiTNormal;
+    left: 60px;
+    color: #3c3b3b;
+
+    /* @include media-breakpoint-down($mobile_version) {
+      left: 10px;
+    } */
+    @media all and (max-width:1680px) {
+      left: auto;
+      right: 60px;
+    }
+    @include media-breakpoint-down($mobile_version) {
+      position: initial;
+      display: block;
+      margin: 12px auto;
+      width: 90%;
     }
   }
 }
