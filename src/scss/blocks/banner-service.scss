@@ -1,0 +1,32 @@
+.banner-service {
+  &__disclaimer {
+    top: 80px;
+
+    @include media-breakpoint-down($mobile_version) {
+      top: 10px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: #ffffff;
+    position: absolute;
+    top: 235px;
+    left: 60px;
+    font-family: AudiTNormal;
+    max-width: 310px;
+    line-height: 1.4;
+
+    @include media-breakpoint-down($mobile_version) {
+      top: 70px;
+      left: 10px;
+    }
+    @media all and (max-width:576px) {
+      position: initial;
+      display: block;
+      margin: 12px auto;
+      color: #000000;
+      font-size: 12px;
+      max-width: 90%;
+    }
+  }
+}

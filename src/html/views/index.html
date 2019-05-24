@@ -1,32 +1,20 @@
 <%= _.template(require('./../includes/header.html'))({}) %>
-<section class="banner">
+<section class="banner banner-service">
     <div class="banner__content">
-        <img src="/img/banner1.png" class="banner__img"/>
-        <div class="banner__disclaimer">
-            <img src="/img/rings_wh.png" class="banner__disclaimer-rings"/>
-            <h1 class="banner__disclaimer-text">Безупречные условия на покупку Audi</h1>
+        <img src="img/banner-service.jpg" class="banner__img" alt="Баннер" />
+        <div class="banner__disclaimer banner-service__disclaimer">
+            <!-- <img src="img/rings_wh.png" class="banner__disclaimer-rings"/> -->
+            <h1 class="banner__disclaimer-text">Бонусная програма <br>на Audi сервис</h1>
         </div>
-        <button data-src="#callback" data-fancybox class="btn btn-white banner__btn btn-mobile-black">Получить спецпредложение</button>
+        <div class="banner-service__text">Только у нас бонусы равные сумме чека на обслуживание вашего Audi</div>
+        <button data-src="#callback" data-fancybox class="btn btn-white banner__btn btn-mobile-black">Записаться на сервис</button>
     </div>
 </section>
-<section class="cars_in_stock">
-    <div class="cars_in_stock__header">
-        <h2 class="cars_in_stock__head">В салоне Audi Центр Выборгский:</h2>
-    </div>
-    <div class="cars_in_stock__bottom">
-        <div>
-            <img src="/img/car_search.png" class="cars_in_stock__img"/>
-        </div>
-        <div>
-            <span class="cars_in_stock__count">36</span>
-        </div>
-        <div>
-            <span class="cars_in_stock__text">автомобилей в наличии</span>
-        </div>
-    </div>
-</section>
-<%= _.template(require('./../includes/cars/special.html'))({}) %>
-<%= _.template(require('./../includes/cars/showcase.html'))({}) %>
+
+<%= _.template(require('./../includes/top-menu.html'))({}) %>
+<%= _.template(require('./../includes/special-offers.html'))({}) %>
+<%= _.template(require('./../includes/services.html'))({}) %>
+
 <%= _.template(require('./../includes/cars/preference.html'))({}) %>
 <%= _.template(require('./../includes/question.html'))({}) %>
 <%= _.template(require('./../includes/contact.html'))({}) %>

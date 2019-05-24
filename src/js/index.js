@@ -1,6 +1,7 @@
-require("./timer");
+/*require("./timer");*/
 require("./carousel")
 require("./select");
+require("./script-service.js");
 import "@fancyapps/fancybox";
 import tippy from "tippy.js";
 tippy(".icon__question",{
@@ -12,7 +13,7 @@ $("input[type=tel]").mask("+7(000)000-00-00");
 /**
  * Появление а/м при скролле
  */
-$(window).on("scroll", function () {
+/*$(window).on("scroll", function () {
     var showcase = $(".showcase__cars").position().top;
     var position = $(this).scrollTop() + window.innerHeight - 300;
     if (position > showcase) {
@@ -20,13 +21,13 @@ $(window).on("scroll", function () {
         animatedCounter();
         $(this).off("scroll");
     }
-});
+});*/
 
 /**
  * Анимация счётчика
  * @returns {undefined}
  */
-function animatedCounter() {
+/*function animatedCounter() {
     $(".animated .item__head_in_stock").each(function () {
         $(this).prop("Counter", 0).animate({
             Counter: $(this).text()
@@ -38,12 +39,12 @@ function animatedCounter() {
                 }
             });
     });
-}
+}*/
 
 /**
  * Появление а/м при скролле
  */
-$(window).on("scroll", function () {
+/*$(window).on("scroll", function () {
     var showcase = $(".showcase__cars").position().top;
     var position = $(this).scrollTop() + window.innerHeight - 300;
     if (position > showcase) {
@@ -51,7 +52,7 @@ $(window).on("scroll", function () {
         animatedCounter();
         $(this).off("scroll");
     }
-});
+});*/
 
 /**
  * Анимация счётчика

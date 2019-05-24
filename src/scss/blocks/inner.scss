@@ -1,0 +1,16 @@
+.inner {
+  position: relative;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 55px;
+
+  @include media-breakpoint-down($mobile_version) {
+    padding: 0 5px;
+  }
+}
+.inner:after {
+  content: '';
+  display: block;
+  clear: both;
+}
