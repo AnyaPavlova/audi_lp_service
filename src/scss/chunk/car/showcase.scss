@@ -1,0 +1,186 @@
+@import "showcase_mixin";
+
+.showcase {
+  padding-top: 47px;
+}
+.showcase__head-header {
+  @include extbold30;
+  margin-top: 0;
+}
+.showcase__head-text {
+  @include normal16;
+}
+
+.showcase__models {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  padding-left: 28px;
+}
+.showcase__model-item {
+  margin-right: 24px;
+  a {
+    @include normal16;
+    color: #a1a1a1;
+  }
+  &.active a {
+    color: #000000;
+    border-bottom: 2px solid black;
+  }
+}
+.showcase__cars {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.item__head {
+  flex-basis: 10%;
+}
+
+.item__button {
+  flex-basis: 10%;
+}
+
+.item__image {
+  flex-basis: 60%;
+}
+
+.showcase__item {
+  visibility: hidden;
+  &.animated {
+    visibility: visible;
+  }
+  //box-shadow: 9px 11px 3px -6px rgba(0,0,0,0.75);
+  @include showcase__base;
+  .item__head {
+    display: flex;
+    flex-direction: row;
+  }
+  .item__head-header{
+    min-height:50px;
+  }
+  .item__head-left {
+    flex-basis: 70%;
+  }
+
+  .item__head_in_stock,
+  .item__head_in_stock-text {
+    color: $audi_red;
+  }
+  .item__head-right {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+  }
+  .item__head_in_stock {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $audi_red;
+    text-align: center;
+    padding: 6px 0;
+    margin-right: 5px;
+    @include extbold19;
+  }
+  .item__head_in_stock-text {
+    word-break: break-word;
+    @include normal12;
+  }
+
+  .button__select {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.showcase__car__item {
+  .item__head {
+    display: flex;
+    flex-direction: column;
+  }
+  @include showcase__base;
+  .item__button .button__finnal.w100 {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  &.icon__question {
+    background: url("/img/question_car.png") center center no-repeat;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .showcase__item,
+  .showcase__car__item {
+    flex-basis: 23%;
+  }
+}
+@include media-breakpoint-down($mobile_version) {
+  .showcase {
+    padding-top: 30px;
+  }
+  .showcase__models{
+    padding-left: 15px;
+  }
+  .showcase__head-header {
+    font-size: 16px;
+  }
+  .showcase__head-text {
+    font-size: 12px;
+  }
+  div.showcase__head-right {
+    margin-top: 15px;
+  }
+  .showcase__model_in_stock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .showcase__model__list {
+    display: block;
+    padding: 20px 0;
+    flex-basis: 50%;
+  }
+  .audi__select {
+    width: 100%;
+  }
+  .showcase__model-item {
+    display: none;
+    &.active {
+      font-size: 12px;
+      display: initial;
+    }
+  }
+  .showcase__cars {
+    flex-direction: column;
+  }
+  .showcase__item {
+    .item__head-header{
+      min-height: auto;
+    }
+    .item__head-left {
+      flex-basis: 65%;
+    }
+
+    .item__head-right {
+      flex-basis: 35%;
+    }
+  }
+  .showcase__item .item__button .button__select {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .showcase__head-right .btn {
+    width: 100%;
+  }
+}

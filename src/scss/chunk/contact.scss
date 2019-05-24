@@ -1,0 +1,103 @@
+.contact{
+  margin:60px 0 100px;
+}
+.contact_head{
+  @include extbold30;
+  margin:0;
+  .red{
+    @include extbold30;
+    color:$audi_red;
+  }
+}
+.contact_subhead{
+  @include extnormal19;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.contact__icon::before{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:10px;
+  float: left;
+}
+.contact__promo,.contact__address,.contact__phone{
+  display: block;
+}
+.contact__address{
+  @include normal16;
+  margin-bottom: 50px;
+  line-height: 1.5;
+  &::before{
+    content:url("/img/poi-small.png")
+  }
+}
+.contact__phone{
+  @include extnormal22;
+  margin-bottom: 10px;
+  &::before{
+    content: url("/img/phone_big.png");
+  }
+}
+.contact__promo{
+  @include normal16;
+  margin-left: 20px;
+}
+.contact__button-group{
+  margin-top: 63px;
+}
+.contact__button__container{
+  display: flex;
+  .btn{
+    text-align: center;
+    width: 100%;
+  }
+}
+.contact__right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > div{
+    width: 500px;
+    height:400px;
+  }
+}
+@include media-breakpoint-down($mobile_version){
+  .contact{
+    margin-bottom: 30px;
+  }
+  .contact__right{
+    display: block;
+    & > div{
+      margin-top:20px;
+      width:100%;
+      height:400px;
+    }
+  }
+  .contact_head{
+    font-size: 21px;
+    .red{
+      font-size: inherit;
+    }
+  }
+  .contact_subhead{
+    font-size: 14px;
+  }
+  .contact__address,.contact__promo{
+    font-size: 12px;
+  }
+  .contact__address,.contact__promo,.contact_subhead{
+    margin-bottom: 30px;
+  }
+  .contact__phone{
+    font-size: 16px;
+  }
+  .contact__button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact__button__container{
+    flex-basis: 48%;
+  }
+}

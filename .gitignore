@@ -1,0 +1,7 @@
+.idea
+.vscode
+nbproject
+dist
+node_modules
+package-lock.json
+/nbproject/private/

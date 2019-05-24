@@ -1,0 +1,180 @@
+/**
+ * Баннер
+ */
+.banner__content {
+  position: relative;
+
+  .banner__img {
+    width: 100%;
+  }
+}
+
+.banner__disclaimer {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  max-width: 57%
+}
+
+.banner__disclaimer-rings {
+  min-width: 150px;
+}
+
+.banner__disclaimer-text {
+  @include extbold56;
+     margin-top: 0;
+  color: #fff;
+}
+
+.banner__btn {
+  position: absolute;
+  top:490px;
+  left: 60px;
+  &:hover{
+    background-color: #fff;
+    color:#bb0a30;
+  }
+}
+@media all and (max-width:1800px){
+    .banner__btn{
+        top:400px;
+    }
+}
+@media all and (max-width:1400px){
+  .banner__btn{
+    top:360px;
+    left:40px
+  }
+}
+@include media-breakpoint-down($mobile_version) {
+  .banner__disclaimer {
+    top: 10px;
+    left: 10px;
+    max-width: 80%;
+  }
+  .banner__btn {
+    position: initial;
+    display: block;
+    margin: 12px auto;
+    width: 90%;
+  }
+  .banner__disclaimer-rings {
+    min-width: 10px;
+    max-width: 40px;
+  }
+  .banner__disclaimer-text {
+    @include extbold16;
+  }
+}
+
+/**
+ * Автомобили в наличии
+ */
+.cars_in_stock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 66px 0;
+}
+
+.cars_in_stock__bottom {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+
+  div:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  div:last-child {
+    max-width: 200px;
+  }
+}
+
+.cars_in_stock__img {
+  max-width: 73px;
+}
+
+.cars_in_stock__head {
+  @include extbold30;
+}
+
+.cars_in_stock__count {
+  @include extbold48;
+}
+
+.cars_in_stock__text {
+  @include normal21;
+}
+
+@include media-breakpoint-down($mobile_version){
+  .cars_in_stock{
+    padding: 32px 0;
+  }
+  .cars_in_stock__head{
+    @include extbold16;
+    text-align: center;
+  }
+  .cars_in_stock__count{
+    @include extbold34;
+  }
+  .cars_in_stock__text{
+    @include normal15;
+  }
+  .cars_in_stock__img{
+    max-width: 40px;
+  }
+}
+
+/**
+ * Специальное предложение
+ */
+.special_block {
+  padding-bottom: 36px;
+  & > .main__container > .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.special_block__text {
+  @include normal16;
+}
+
+.special_block__head {
+  @include extbold30;
+}
+
+.special_block__timer_text {
+  text-align: center;
+  @include extbold24;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.special_block__carousel {
+  margin-top: 45px;
+}
+
+@include media-breakpoint-down($mobile_version){
+  .special_block__head{
+    @include extbold16;
+    text-align: center;
+  }
+  .special_block__text{
+    display: inline-block;
+    @include normal12;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .special_block__timer_text{
+    @include extbold14;
+  }
+}
+
+@import "chunk/car/special_carousel";
+@import "chunk/car/showcase";
+@import "chunk/car/preference";

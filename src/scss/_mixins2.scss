@@ -1,0 +1,92 @@
+@mixin customNormal($size){
+  font-family: AudiTNormal;
+  font-size: $size+px;
+}
+@mixin customExtBold($size){
+  font-family: AudiTEBold;
+  font-size: $size+px;
+}
+@mixin customExtNormal($size){
+  font-family: AudiTENormal;
+  font-size: $size+px;
+}
+/**
+  NORMAL
+ */
+@mixin normal12{
+  @include customNormal(12);
+}
+@mixin normal14{
+  @include customNormal(15);
+}
+@mixin normal15{
+  @include customNormal(15);
+}
+@mixin normal16{
+  @include customNormal(16);
+}
+
+@mixin normal21{
+  @include customNormal(21);
+}
+/**
+ * ExtNormal
+ */
+@mixin extnormal15{
+  @include customExtNormal(15);
+}
+@mixin extnormal16{
+  @include customExtNormal(16);
+}
+@mixin extnormal19{
+  @include customExtNormal(19);
+}
+@mixin extnormal22{
+  @include customExtNormal(22);
+}
+@mixin extnormal30{
+  @include customExtNormal(30);
+}
+/**
+ * BOLD
+ */
+@mixin extbold13{
+  @include customExtBold(13);
+}
+@mixin extbold14{
+  @include customExtBold(14);
+}
+@mixin extbold16{
+  @include customExtBold(16);
+}
+@mixin extbold18{
+  @include customExtBold(18);
+}
+@mixin extbold19{
+  @include customExtBold(19);
+}
+@mixin extbold22{
+  @include customExtBold(22);
+}
+@mixin extbold24{
+  @include customExtBold(24);
+}
+@mixin extbold30{
+  @include customExtBold(30);
+}
+@mixin extbold34{
+  @include customExtBold(34);
+}
+@mixin extbold48{
+  @include customExtBold(48);
+}
+@mixin extbold56{
+  @include customExtBold(56);
+}
+
+@mixin select2__item {
+  @include normal16;
+  color: #000000;
+  padding: 5px 10px;
+}
+

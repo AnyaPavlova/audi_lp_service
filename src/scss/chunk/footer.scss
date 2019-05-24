@@ -1,0 +1,46 @@
+.footer{
+  border-top:$audi_gray 1px solid;
+}
+.footer__disclaimer{
+  padding: 34px 0;
+}
+.footer__disclaimer-text{
+  @include normal12;
+  color:$audi_gray;
+  max-width: 70%;
+}
+.footer__disclaimer-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.btn-dislaimer{
+  padding: 17px 29px;
+  border:1px solid #000;
+  align-self: center;
+}
+.footer__copyright{
+  @include normal12;
+  background-color: #000;
+  padding: 15px 0;
+}
+.footer__copyright-text{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+@include media-breakpoint-down($mobile_version){
+  .footer__disclaimer-text{
+    max-width: 100%;
+    font-size: 12px;
+  }
+  .footer__disclaimer-right{
+    justify-content: flex-start;
+  }
+  .footer__disclaimer{
+    padding: 25px 0;
+  }
+  .footer__copyright-text{
+    font-size: 12px;
+  }
+}
