@@ -7,7 +7,7 @@
   margin: 0;
 }
 .preference{
-  background:url("/img/background_preference.png") center center no-repeat;
+  background:url("../img/background_preference.png") center center no-repeat;
   background-size: cover;
   padding: 90px 0;
 }
@@ -31,19 +31,19 @@
     vertical-align: text-top;
   }
   &.test::before{
-    content:url("/img/icon_test.png");
+    content:url("../img/icon_test.png");
   }
   &.cafe::before{
-    content:url("/img/icon_cafe.png");
+    content:url("../img/icon_cafe.png");
   }
   &.atmosphere::before{
-    content:url("/img/icon_atm.png");
+    content:url("../img/icon_atm.png");
   }
   &.child::before{
-    content:url("/img/icon_child.png");
+    content:url("../img/icon_child.png");
   }
   &.biblio::before{
-    content:url("/img/icon_biblio.png");
+    content:url("../img/icon_biblio.png");
   }
 }
 @include media-breakpoint-down($mobile_version){

@@ -28,14 +28,14 @@
   margin-bottom: 50px;
   line-height: 1.5;
   &::before{
-    content:url("/img/poi-small.png")
+    content:url("../img/poi-small.png")
   }
 }
 .contact__phone{
   @include extnormal22;
   margin-bottom: 10px;
   &::before{
-    content: url("/img/phone_big.png");
+    content: url("../img/phone_big.png");
   }
 }
 .contact__promo{

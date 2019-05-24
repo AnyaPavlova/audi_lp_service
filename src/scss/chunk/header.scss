@@ -18,13 +18,13 @@
 }
 .header__item-phone{
   &::before{
-    content:url("/img/phone.png");
+    content:url("../img/phone.png");
     top:2px;
   }
 }
 .header__item-map{
   &::before{
-    content:url("/img/poi-small.png");
+    content:url("../img/poi-small.png");
   }
 }
 .header__small{
