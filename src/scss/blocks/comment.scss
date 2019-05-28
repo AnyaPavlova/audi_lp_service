@@ -19,6 +19,12 @@
     z-index: 5;
     color: #ffffff;
 
+    @media all and (max-width:575px) {
+      width: 135px;
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
     &:before {
       content:'';
         position: absolute;
