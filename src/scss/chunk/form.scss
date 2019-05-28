@@ -38,10 +38,10 @@ input[type=checkbox] + label{
   }
 }
 input[type=checkbox]:checked + label::before{
-  content: url("/img/checkbox_on.png");
+  content: url("../img/checkbox_on.png");
 }
 input[type=checkbox]:not(:checked) + label::before{
-    content: url("/img/checkbox_off.png");
+    content: url("../img/checkbox_off.png");
 }
 .form-block{
   margin:10px 0;

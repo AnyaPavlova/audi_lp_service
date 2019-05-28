@@ -1,0 +1,46 @@
+.comment {
+  position: relative;
+  z-index: 2;
+  cursor: default;
+  display: inline-block;
+
+  &__body {
+    display: none;
+    font-family: AudiTNormal;
+    font-weight: 400;
+    position: absolute;
+    top: 25px;
+    transform: translateX(-54%);
+    background: #333333;    
+    padding: 7px 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    width: 185px;
+    z-index: 5;
+    color: #ffffff;
+
+    &:before {
+      content:'';
+        position: absolute;
+        border: 8px solid transparent; //ширина треугольника
+        border-bottom: 8px solid #333333; //высота треугольника, #d27b2b - цвет;
+        border-top: 0; //убираем лишнее
+        display: block;
+        width: 0;
+        height: 0;
+        background-color: transparent; //прозрачный фон
+        top: -8px; //положение
+    //выравниваем по центру
+        left: 0;
+        right: 0;
+        margin: auto;
+      z-index: 5;
+    }
+  }
+
+  &:hover {
+    .comment__body {
+      display: inline-block;
+    }
+  }
+}
